@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "tinacms": "^2.2.2"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^1.6.2",
+    "@types/node": "^22.5.2"
+  }
+}
