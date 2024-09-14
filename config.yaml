@@ -19,7 +19,7 @@ minify:
 
 languages:
   en:
-    languageName: "English"
+    languageName: ":us:"
     weight: 1
     taxonomies:
       category: categories
@@ -40,7 +40,7 @@ languages:
           url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
   pt:
-    languageName: "Português"
+    languageName: ":portugal:"
     weight: 2
     title: Mazafard
     taxonomies:
@@ -66,24 +66,23 @@ languages:
 
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
-      languageAltTitle: French
+      languageAltTitle: Português
       profileMode:
         enabled: true
-        title: PaperMod
+        title: Mazafard
         imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
-        imageTitle: ProfileMode image
+        imageTitle: Mazafard
         # imageWidth: 120
         # imageHeight: 120
         subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
         buttons:
           - name: Blog
             url: posts
-          - name: Profile Mode
-            url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
+        
 
   fa:
     languagedirection: rtl
-    languageName: "فارسی"
+    languageName: ":iran:"
     weight: 3
     title: مضافرد
     taxonomies:
@@ -151,29 +150,36 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "PaperMod's Demo"
+    Title: "Welcome to My Blog"
     Content: >
-      👋 Welcome to demo page of Hugo's theme PaperMod!
 
-      - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
+      👋 Welcome to my personal blog!
+      
+      - I'm **Mazafard**, an adventurer who took a leap of faith by migrating to a new country and embarking on the journey of entrepreneurship.
 
-      - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
+      - I'm passionate about exploring new fields and sharing the insights I gather along the way.
 
-      - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
+      - Join me as I delve into exciting topics and navigate this ever-evolving path with enthusiasm and determination!
 
   socialIcons:
     - name: github
-      title: View Source on Github
-      url: "https://github.com/adityatelange/hugo-PaperMod"
-    - name: Discord
-      title: Join discord community
-      url: "https://discord.gg/ahpmTvhVmp"
+      title: View My Github
+      url: "https://github.com/mazafard"
     - name: X
       title: Share PaperMod on X/Twitter
-      url: "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
+      url: "https://x.com/mazafard"
+    - name: Instagram
+      title: Buy me a Ko-Fi :)
+      url: "https://ko-fi.com/mazafard"
+    - name: pgpkey
+      title: Buy me a Ko-Fi :)
+      url: "https://ko-fi.com/mazafard"
+    - name: email
+      title: Send me email
+      url: "mailto:mazafard@gmail.com"
     - name: KoFi
       title: Buy me a Ko-Fi :)
-      url: "https://ko-fi.com/adityatelange"
+      url: "https://ko-fi.com/mazafard"
 
   # editPost:
     # URL: "https://github.com/mazafard/blog/tree/blog/content"
