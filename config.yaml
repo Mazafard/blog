@@ -11,7 +11,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-mainsections: ["posts", "papermod"]
+mainsections: ["posts", ]
 
 minify:
   disableXML: true
@@ -39,7 +39,7 @@ languages:
         - name: WiKi
           url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
-  fr:
+  pt:
     languageName: ":fr:"
     weight: 2
     title: Mazafard
@@ -104,6 +104,7 @@ languages:
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
       languageAltTitle: فارسی
+      author: "مضا فرد"
       homeInfoParams:
         Title: "سلام سلام \U0001F44B"
         Content: خوش اومدین!
@@ -117,7 +118,7 @@ outputs:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-  author: Theme PaperMod
+  author: "Maza Fard"
   # author: ["Me", "You"] # multiple authors
 
   defaultTheme: auto
