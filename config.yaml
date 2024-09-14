@@ -40,26 +40,26 @@ languages:
           url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
   pt:
-    languageName: ":fr:"
+    languageName: "Português"
     weight: 2
     title: Mazafard
     taxonomies:
-      category: FRcategories
-      tag: FRtags
-      series: FRseries
+      category: PTcategories
+      tag: PTtags
+      series: PTseries
     menu:
       main:
         - name: Archive
           url: archives/
           weight: 5
-        - name: FRTags
-          url: frtags
+        - name: Tags
+          url: PTtags
           weight: 10
-        - name: FRCategories
-          url: frcategories
+        - name: Categories
+          url: PTcategories
           weight: 10
-        - name: FRSeries
-          url: frseries
+        - name: Series
+          url: PTseries
           weight: 10
         - name: NullLink
           url: "#"
@@ -83,7 +83,7 @@ languages:
 
   fa:
     languagedirection: rtl
-    languageName: ":fa:"
+    languageName: "فارسی"
     weight: 3
     title: مضافرد
     taxonomies:
