@@ -60,7 +60,3 @@ These Terms are governed by and construed in accordance with the laws of \[inser
 
 If you have any questions about these Terms, please contact us at:\
 **Email:** [fog\_dine.0z@icloud.com](mailto:fogs_dine.0z@icloud.com).
-
-***
-
-This **Terms of Use** covers key aspects, such as account registration, app usage, intellectual property, and subscription details. Make sure to modify details like jurisdiction and email as needed. Let me know if you need more adjustments!
