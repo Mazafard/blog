@@ -4,7 +4,7 @@ title: privacy
 
 ### Privacy Policy for Ponti
 
-Effective Date: \[Insert Date]
+Effective Date: 8 October 2024
 
 1\. Introduction
 Ponti ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and safeguard your personal data when you use our app.
@@ -25,8 +25,8 @@ Ponti ("we," "our," or "us") is committed to protecting your privacy. This Priva
 
 5\. Data Security We use standard encryption methods to protect your data. However, no method of transmission over the Internet or electronic storage is 100% secure.
 
-6\. Your Rights You can request to access, update, or delete your personal data by contacting us at \[your contact email].
+6\. Your Rights You can request to access, update, or delete your personal data by contacting us at [ fogs_dine.0z@icloud.com.](mailto: fogs_dine.0z@icloud.com.)
 
 7\. Changes to This Privacy Policy We may update this policy occasionally. Please review it regularly. Changes will be effective immediately upon posting.
 
-8\. Contact Us If you have any questions or concerns, please contact us at: \[your email address].
+8\. Contact Us If you have any questions or concerns, please contact us at: [ fogs_dine.0z@icloud.com.](mailto: fogs_dine.0z@icloud.com.).
