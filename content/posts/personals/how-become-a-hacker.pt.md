@@ -13,9 +13,9 @@ PTseries:
   - tutorial de hacking
 aliases:
   - como-se-tornar-um-hacker
-ShowToc: true  
-weight: 1  
-title: Como Se Tornar um Hacker  
+ShowToc: true
+weight: 3
+title: Como Se Tornar um Hacker
 ---
 
 ## Por Que Este Documento?

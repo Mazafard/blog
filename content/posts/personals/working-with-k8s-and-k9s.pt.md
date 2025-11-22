@@ -14,7 +14,7 @@ PTcategories:
 PTseries:
   - ferramentas devops
 ShowToc: true
-weight: 1
+weight: 2
 title: Trabalhando com K8s e K9s
 ---
 

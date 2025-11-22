@@ -14,7 +14,7 @@ FAcategories:
 FAseries:
   - ابزارهای دوآپس
 ShowToc: true
-weight: 1
+weight: 2
 title: کار با K8s و K9s
 ---
 

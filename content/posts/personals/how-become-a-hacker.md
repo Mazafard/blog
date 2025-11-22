@@ -7,7 +7,7 @@ categories: ["technology","programming"]
 series: ["hacking tutorial"]
 aliases: ["how-to-become-a-hacker"]
 ShowToc: true
-weight: 1
+weight: 3
 title: How to Become a Hacker
 ---
 
