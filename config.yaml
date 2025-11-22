@@ -1,6 +1,7 @@
 baseURL: https://blog.fard.pt/
 languageCode: en-us
 title: MazaFard
+googleAnalytics: "G-5JVY1RQY4E"
 paginate: 5
 theme: ["PaperMod"]
 
