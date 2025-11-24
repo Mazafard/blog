@@ -7,7 +7,7 @@ categories: ["science", "mathematics"]
 series: ["math chats"]
 ShowToc: true
 weight: -6
-title: Linear Algebra: Beyond Numbers, A Language for Change
+title: "Linear Algebra: Beyond Numbers, A Language for Change"
 ---
 
 ## Linear Algebra: Beyond Numbers, A Language for Change and Connection

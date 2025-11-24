@@ -15,7 +15,7 @@ PTseries:
   - papo matemático
 ShowToc: true
 weight: -6
-title: Álgebra Linear: Além dos Números, Uma Linguagem para Mudança
+title: "Álgebra Linear: Além dos Números, Uma Linguagem para Mudança"
 ---
 
 ## Álgebra Linear: Além dos Números, Uma Linguagem para Mudança e Conexão
