@@ -6,7 +6,7 @@ tags: ["kubernetes", "k8s", "k9s", "devops", "tools"]
 categories: ["technology", "devops"]
 series: ["devops tools"]
 ShowToc: true
-weight: 2
+weight: -3
 title: Working with K8s and K9s
 ---
 

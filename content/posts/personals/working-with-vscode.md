@@ -6,7 +6,7 @@ tags: ["vscode", "editor", "git", "settings"]
 categories: ["technology", "tools"]
 series: ["dev tools"]
 ShowToc: true
-weight: 1
+weight: -4
 title: Working with VS Code (Reluctantly!)
 ---
 

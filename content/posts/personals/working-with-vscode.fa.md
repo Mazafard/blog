@@ -13,7 +13,7 @@ FAcategories:
 FAseries:
   - ابزارهای توسعه
 ShowToc: true
-weight: 1
+weight: -4
 title: کار با VS Code (با اکراه!)
 ---
 

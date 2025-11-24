@@ -14,7 +14,7 @@ PTseries:
 aliases:
   - como-se-tornar-um-hacker
 ShowToc: true
-weight: 3
+weight: -2
 title: Como Se Tornar um Hacker
 ---
 

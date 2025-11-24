@@ -14,7 +14,7 @@ FAseries:
 aliases:
   - چگونه-یک-هکر-شویم
 ShowToc: true
-weight: 3
+weight: -2
 title: چگونه یک هکر شویم
 ---
 

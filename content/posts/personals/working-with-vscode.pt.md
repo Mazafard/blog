@@ -13,7 +13,7 @@ PTcategories:
 PTseries:
   - ferramentas dev
 ShowToc: true
-weight: 1
+weight: -4
 title: Trabalhando com o VS Code (A contragosto!)
 ---
 
