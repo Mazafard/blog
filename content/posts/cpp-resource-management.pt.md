@@ -3,6 +3,7 @@ title: "Gerenciamento de Recursos em C++: O Quadro Completo"
 date: 2025-11-26T00:00:00+00:00
 draft: false
 tags: ["C++", "Programação", "Gerenciamento de Memória"]
+weight: -7
 categories: ["Programação"]
 ---
 
