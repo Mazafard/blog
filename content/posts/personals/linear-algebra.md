@@ -14,7 +14,7 @@ title: "Linear Algebra: Beyond Numbers, A Language for Change"
 
 Linear Algebra isn't just another math subject you have to get through; it's actually a powerful language for describing how things change, relate, and move in multi-dimensional space. It might look like a bunch of scary matrices and vectors at first, but trust me, it's the secret sauce behind a lot of the tech we use every single day.
 
-### ⚛️ The Cool Concepts
+### The Cool Concepts
 
 At its core, linear algebra is about two main things:
 
@@ -24,7 +24,7 @@ At its core, linear algebra is about two main things:
 
 *Fun fact:* When you multiply a vector by a matrix, you're basically applying a geometric filter—like rotating, stretching, or skewing—to that vector.
 
-### 💻 Where It Actually Shows Up
+### Where It Actually Shows Up
 
 We are living in the age of data, and linear algebra is running the show:
 
@@ -40,6 +40,6 @@ When AI models try to make sense of data, they use tricks like Principal Compone
 **Image Editing:**
 Compressing a JPEG or blurring a background? That's often done using matrix decomposition methods like SVD. It's all math under the hood.
 
-### ❓ Why Should You Care?
+### Why Should You Care?
 
 Linear algebra gives us a way to handle complex problems with thousands of variables without losing our minds. By translating messy real-world problems into the clean language of matrices, we can use powerful tools to spot patterns and predict what happens next. It's like having a cheat code for understanding the universe.

@@ -2,7 +2,8 @@ baseURL: https://blog.fard.pt/
 languageCode: en-us
 title: MazaFard
 googleAnalytics: "G-5JVY1RQY4E"
-paginate: 5
+pagination:
+  pagerSize: 5
 theme: ["PaperMod"]
 
 enableInlineShortcodes: true
@@ -250,5 +251,5 @@ markup:
 services:
   instagram:
     disableInlineCSS: true
-  twitter:
+  x:
     disableInlineCSS: true
