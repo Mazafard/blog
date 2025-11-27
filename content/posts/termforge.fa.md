@@ -3,6 +3,7 @@ title: "TermForge: نوسازی محیط کاری ترمینال من"
 date: 2025-11-27T00:00:00+00:00
 draft: false
 tags: ["ترمینال", "Ansible", "DevOps", "macOS", "Kubernetes", "Neovim"]
+weight: -8
 categories: ["ابزارها", "DevOps"]
 ---
 

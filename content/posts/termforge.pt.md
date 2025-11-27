@@ -3,6 +3,7 @@ title: "TermForge: Modernizando meu Workflow no Terminal"
 date: 2025-11-27T00:00:00+00:00
 draft: false
 tags: ["Terminal", "Ansible", "DevOps", "macOS", "Kubernetes", "Neovim"]
+weight: -8
 categories: ["Ferramentas", "DevOps"]
 ---
 
