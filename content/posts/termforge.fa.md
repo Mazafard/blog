@@ -80,8 +80,8 @@ ansible-playbook -i hosts termforge.yml --tags k8s-tools
 
 ### کلون و اجرا (Clone + Run)
 ```bash
-git clone https://github.com/<your-username>/termforge.git
-cd termforge
+git clone https://github.com/Mazafard/TermForge.git
+cd TermForge
 ansible-playbook -i hosts --ask-become-pass termforge.yml
 ```
 *   فایل `termenv.yml` هنوز هست ولی الان فقط `termforge.yml` رو ایمپورت می‌کنه، پس اسکریپت‌های قدیمی کار می‌کنن.
@@ -114,4 +114,4 @@ ansible-playbook -i hosts nerdfonts.yml -e "font_name=Hack"
 
 ...پس TermForge ارزش امتحان کردن رو داره.
 
-کدها روی گیت‌هاب هست، README تمام جزئیات رو پوشش میده و می‌تونید پلی‌بوک رو تیکه تیکه یا یکجا اجرا کنید. Happy forging!
+کدها روی [گیت‌هاب](https://github.com/Mazafard/TermForge) هست، README تمام جزئیات رو پوشش میده و می‌تونید پلی‌بوک رو تیکه تیکه یا یکجا اجرا کنید. Happy forging!

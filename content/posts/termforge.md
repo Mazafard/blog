@@ -80,8 +80,8 @@ ansible-playbook -i hosts termforge.yml --tags k8s-tools
 
 ### Clone + Run
 ```bash
-git clone https://github.com/<your-username>/termforge.git
-cd termforge
+git clone https://github.com/Mazafard/TermForge.git
+cd TermForge
 ansible-playbook -i hosts --ask-become-pass termforge.yml
 ```
 *   `termenv.yml` still exists but now just imports `termforge.yml`, so legacy scripts keep working.
@@ -114,4 +114,4 @@ Forking let me move fast: rename the project, reorganize docs, and add the macOS
 
 …then TermForge is worth a spin.
 
-The code’s on GitHub, the README covers all the details, and you can run the playbook piecemeal or all at once. Happy forging!
+The code’s on [GitHub](https://github.com/Mazafard/TermForge), the README covers all the details, and you can run the playbook piecemeal or all at once. Happy forging!
