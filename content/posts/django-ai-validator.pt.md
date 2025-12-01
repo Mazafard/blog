@@ -23,6 +23,7 @@ Porque qualidade de conteúdo já não se resume a caracteres permitidos. Precis
 - **Suporte a async:** Chamadas demoradas ao LLM podem ir para tasks Celery, mantendo o request-response ágil.
 
 Documentação: [mazafard.github.io/Django-AI-Validator](https://mazafard.github.io/Django-AI-Validator/)
+
 Código aberto: [github.com/Mazafard/Django-AI-Validator](https://github.com/Mazafard/Django-AI-Validator)
 
 ## Tour de Arquitetura (a.k.a. o Cantinho Nerd)

@@ -23,7 +23,8 @@ Regex برای ایمیل، کدپستی و رشته‌های مرتب عالی�
 - **پشتیبانی از پردازش غیرهمزمان:** فراخوانی‌های طولانی LLM رو می‌تونید به Celery بسپارید تا درخواست اصلی سریع تمام شه.
 
 مستندات: [mazafard.github.io/Django-AI-Validator](https://mazafard.github.io/Django-AI-Validator/)
-کد منبع: [github.com/Mazafard/Django-AI-Validator](https://github.com/Mazafard/Django-AI-Validator)
+
+سورس کد: [github.com/Mazafard/Django-AI-Validator](https://github.com/Mazafard/Django-AI-Validator)
 
 ## تور معماری (بخش عاشقان جزئیات)
 
