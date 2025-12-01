@@ -31,7 +31,7 @@ Regex برای ایمیل، کدپستی و رشته‌های مرتب عالی�
 برای اینکه کتابخونه انعطاف‌پذیر و Provider-agnostic بمونه از الگوهای طراحی کلاسیک کمک گرفتم:
 
 1. **Adapter Pattern:** اینترفیس `LLMAdapter` متدهای `validate` و `clean` رو تعریف می‌کنه و آداپترهای `OpenAIAdapter`، `AnthropicAdapter`، `GeminiAdapter` و `OllamaAdapter` درخواست‌ها رو مطابق API هر سرویس ترجمه می‌کنند.
-2. **Abstract Factory:** `AIProviderFactory` وقتی می‌گویید «openai» یا «ollama»، بسته کامل آداپتر و تنظیمات صحیح رو می‌ده؛ خبری از `if provider == ...` های پخش و پلا نیست.
+2. **Abstract Factory:** وقتی به کلاس  `AIProviderFactory`  می‌گید «openai» یا «ollama»، بسته کامل آداپتر و تنظیمات صحیح رو می‌ده؛ خبری از `if provider == ...` های پخش و پلا نیست.
 3. **Singleton Cache:** کلاس `LLMCacheManager` کش اشتراکی برای جفت پرامپت+متن نگه می‌دارد تا اعتبارسنجی تکراری هزینه توکن اضافه نداشته باشه.
 4. **Proxy Pattern:** `CachingLLMProxy` قبل از تماس با آداپتر واقعی، کش رو چک می‌کنه، روی miss درخواست رو می‌فرسته و نتیجه رو ذخیره می‌کنه، بی‌آنکه شما تغییری بدید.
 5. **Facade Pattern:** `AICleaningFacade` همه این پیچیدگی‌ها رو می‌پوشاند؛ Validator فقط `facade.validate()` یا `facade.clean()` رو صدا می‌زنه.
