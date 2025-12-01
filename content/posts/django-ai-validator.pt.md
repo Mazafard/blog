@@ -3,7 +3,7 @@ title: "Apresentando o Django AI Validator: Quando Regex Não Basta"
 date: 2025-12-01T00:00:00+00:00
 draft: false
 tags: ["Django", "IA", "Validação", "LLM"]
-weight: -6
+weight: -9
 categories: ["Programação"]
 ---
 

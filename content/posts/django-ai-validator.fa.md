@@ -3,7 +3,7 @@ title: "معرفی Django AI Validator: وقتی Regex کافی نیست"
 date: 2025-12-01T00:00:00+00:00
 draft: false
 tags: ["Django", "هوش مصنوعی", "اعتبارسنجی", "LLM"]
-weight: -6
+weight: -9
 categories: ["برنامه‌نویسی"]
 ---
 
