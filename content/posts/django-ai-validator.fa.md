@@ -34,8 +34,8 @@ Regex برای ایمیل، کدپستی و رشته‌های مرتب عالی�
 2. **Abstract Factory:** وقتی به کلاس  `AIProviderFactory`  می‌گید «openai» یا «ollama»، بسته کامل آداپتر و تنظیمات صحیح رو می‌ده؛ خبری از `if provider == ...` های پخش و پلا نیست.
 3. **Singleton Cache:** کلاس `LLMCacheManager` کش اشتراکی برای جفت پرامپت+متن نگه می‌دارد تا اعتبارسنجی تکراری هزینه توکن اضافه نداشته باشه.
 4. **Proxy Pattern:** کلاس `CachingLLMProxy` قبل از تماس با آداپتر واقعی، کش رو چک می‌کنه، روی miss درخواست رو می‌فرسته و نتیجه رو ذخیره می‌کنه، بی‌آنکه شما تغییری بدید.
-5. **Facade Pattern:** `AICleaningFacade` همه این پیچیدگی‌ها رو می‌پوشاند؛ Validator فقط `facade.validate()` یا `facade.clean()` رو صدا می‌زنه.
-6. **Template Method:** `AISemanticValidator` روند ثابت `prepare_input → call_llm → parse_response → raise_validation_error` رو تعریف می‌کنه؛ می‌توانید گام‌های لازم رو override کنید و اسکلت رو دست‌نخورده نگه دارید.
+5. **Facade Pattern:** کلاس `AICleaningFacade` همه این پیچیدگی‌ها رو می‌پوشاند؛ Validator فقط `facade.validate()` یا `facade.clean()` رو صدا می‌زنه.
+6. **Template Method:** کلاس `AISemanticValidator` روند ثابت `prepare_input → call_llm → parse_response → raise_validation_error` رو تعریف می‌کنه؛ می‌توانید گام‌های لازم رو override کنید و اسکلت رو دست‌نخورده نگه دارید.
 
 ## استفاده داخل مدل
 
