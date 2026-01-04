@@ -116,7 +116,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  description: "Personal blog by Maza Fard on engineering, entrepreneurship, and life in Portugal"
   author: "Maza Fard"
   # author: ["Me", "You"] # multiple authors
 
