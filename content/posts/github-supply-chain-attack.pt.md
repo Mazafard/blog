@@ -3,7 +3,7 @@ title: "Descobrindo um Ataque Massivo da Cadeia de Fornecimento do GitHub: Quand
 date: 2026-04-29T00:00:00+00:00
 draft: false
 tags: ["Segurança", "GitHub", "Cadeia de Fornecimento", "Malware", "Cibersegurança"]
-weight: -1
+weight: -10
 categories: ["Segurança", "Programação"]
 ---
 

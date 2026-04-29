@@ -3,7 +3,7 @@ title: "Uncovering a Massive GitHub Supply Chain Attack: When a Friend's Repo Bi
 date: 2026-04-29T00:00:00+00:00
 draft: false
 tags: ["Security", "GitHub", "Supply Chain", "Malware", "Cybersecurity"]
-weight: -1
+weight: -10
 categories: ["Security", "Programming"]
 ---
 
