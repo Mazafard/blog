@@ -1,21 +1,21 @@
 ---
-title: "Descobrindo um Ataque Massivo da Cadeia de Fornecimento do GitHub: Quando o Repositório de um Amigo Morde de Volta"
+title: "A Descoberta de um Mega Ataque à Cadeia de Fornecimento no GitHub: Quando o Repo de um Amigo Ataca!"
 date: 2026-04-29T00:00:00+00:00
 draft: false
-tags: ["Segurança", "GitHub", "Cadeia de Fornecimento", "Malware", "Cibersegurança"]
+tags: ["Security", "GitHub", "Supply Chain", "Malware", "Cybersecurity"]
 weight: -10
-categories: ["Segurança", "Programação"]
+categories: ["Security", "Programming"]
 ---
 
-Começou como qualquer outro dia. Estava casualmente a rever um repositório GitHub de um amigo quando um bloco gigantesco de texto ilegível me chamou a atenção. Estava sentado ali dentro de um ficheiro Python, mas as variáveis eram puro disparate. O meu sentido de cibersegurança começou a formiguejar imediatamente—isto era código altamente ofuscado.
+Tudo começou como um dia qualquer. Estava a dar uma vista de olhos no repositório do GitHub de um amigo quando um bloco de texto gigante e ilegível me chamou a atenção. Estava ali sossegado dentro de um ficheiro Python, mas as variáveis não faziam sentido nenhum. O meu sentido aranha de cibersegurança disparou logo — isto era código altamente ofuscado.
 
-O que não sabia naquele momento era que tinha acabado de descobrir um ataque massivo e altamente sofisticado da cadeia de fornecimento que infetava centenas de repositórios em todo o GitHub.
+O que eu não sabia naquele momento era que tinha acabado de tropeçar num ataque massivo e super sofisticado à cadeia de fornecimento (*supply chain*), a infetar centenas de repositórios por todo o GitHub.
 
-Aqui está a história de como o encontrei, o descodifiquei, e como pode proteger os seus próprios repositórios.
+Aqui fica a história de como o encontrei, de como fiz engenharia reversa e como podes proteger os teus próprios projetos.
 
-## O Fragmento Suspeito
+## O Snippet Suspeito
 
-O código que encontrei parecia assim. É uma técnica clássica de ofuscação: esconder a verdadeira intenção do script atrás de camadas aninhadas de codificação e execução dinâmica.
+O código que encontrei tinha este aspeto. É uma técnica clássica de ofuscação: esconder a verdadeira intenção do script atrás de camadas aninhadas de codificação e execução dinâmica.
 
 ```python
 # -*- coding: utf-8 -*-
@@ -23,97 +23,97 @@ aqgqzxkfjzbdnhz = __import__('base64')
 wogyjaaijwqbpxe = __import__('zlib')
 idzextbcjbgkdih = 134
 qyrrhmmwrhaknyf = lambda dfhulxliqohxamy, osatiehltgdbqxk: bytes([wtqiceobrebqsxl ^ idzextbcjbgkdih for wtqiceobrebqsxl in dfhulxliqohxamy])
-lzcdrtfxyqiplpd = 'eNq9W19z3MaRTy......SN' # Cadeia base64 massiva truncada
+lzcdrtfxyqiplpd = 'eNq9W19z3MaRTy......SN' # Massive base64 string truncated
 runzmcxgusiurqv = wogyjaaijwqbpxe.decompress(aqgqzxkfjzbdnhz.b64decode(lzcdrtfxyqiplpd))
 ycqljtcxxkyiplo = qyrrhmmwrhaknyf(runzmcxgusiurqv, idzextbcjbgkdih)
 exec(compile(ycqljtcxxkyiplo, '<>', 'exec'))
 ```
 
-Observando as últimas três linhas, o fluxo de execução era claro:
+A olhar para as últimas três linhas, o fluxo de execução era claro: 
 1. Descodificar de Base64.
 2. Descomprimir usando Zlib.
 3. Desencriptar usando uma operação XOR (com a chave `134`).
-4. Executar o carregamento malicioso diretamente na memória usando a função altamente perigosa `exec()`.
+4. Executar o payload malicioso diretamente na memória usando a função altamente perigosa `exec()`.
 
-## Quebrando o Código
+## A Quebrar o Código 
 
-Inicialmente tentei desencriptar manualmente o carregamento, mas lidar com a cadeia massiva e as operações aninhadas estava a ficar tedioso. Portanto, coloquei um assistente de IA (Claude) num ambiente isolado e pedi-lhe para escrever um "desofuscador" seguro.
+Inicialmente tentei desencriptar o payload à mão, mas lidar com a string gigante e as operações aninhadas estava a dar cabo da minha paciência. Por isso, abri um assistente de IA (Claude) num ambiente isolado e pedi-lhe para escrever um "desofuscador" seguro. 
 
-O objetivo era simples: substituir o perigoso `exec()` por uma declaração `print()` para despejar o carregamento oculto como texto simples sem realmente o executar.
+O objetivo era simples: substituir o perigoso `exec()` por um `print()` para despejar o payload escondido em texto limpo, sem o executar de verdade.
 
-Aqui está o script que usámos para desativar e extrair o carregamento:
+Aqui está o script que usámos para desarmar e extrair o payload:
 
 ```python
 import base64
 import zlib
 
 key = 134
-# A cadeia gigantesca vai aqui
+# The giant string goes here
 payload_base64 = 'eNq9W19z3MaRTy...' 
 
-# Desembrulhar as camadas
+# Unwrap the layers
 decompressed_data = zlib.decompress(base64.b64decode(payload_base64))
 decoded_bytes = bytes([b ^ key for b in decompressed_data])
 hidden_script = decoded_bytes.decode('utf-8')
 
 print("--------------------------------------------------")
-print("🚨 O CARREGAMENTO OCULTO É: 🚨\n")
+print("🚨 THE HIDDEN PAYLOAD IS: 🚨\n")
 print(hidden_script)
 print("\n--------------------------------------------------")
 ```
 
-## O Monstro Interior
+## O Monstro Lá Dentro
 
-Executar o descodificador numa caixa de areia revelou a verdadeira natureza da besta. O script Python resultante era um **Dropper/Loader** altamente sofisticado concebido para roubar informações.
+Correr o descodificador numa *sandbox* revelou a verdadeira natureza do bicho. O script Python resultante era um **Dropper/Loader** super sofisticado, desenhado para roubar informações.
 
-*(Nota: O carregamento desencriptado completo é massivo, mas aqui estão as características principais e aterrorizantes que continha)*
+*(Nota: O payload desencriptado completo é gigante, mas aqui estão as principais características assustadoras que ele continha)*
 
-1. **Comando e Controlo da Blockchain (C2):** Em vez de se conectar a um endereço IP tradicional e facilmente bloqueável, o malware consulta a **blockchain Solana**. Procura no histórico de transações de uma carteira específica e extrai comandos encriptados escondidos dentro dos "Memos" das transações. Isto torna praticamente impossível derrotar a infraestrutura do atacante.
-2. **Geofencing (A Exceção Russa):** O script inclui uma função chamada `_isRussianSystem()`. Verifica a língua, fuso horário e localização do sistema. Se a máquina infetada estiver localizada na Rússia ou em países da CEI, o malware sai silenciosamente. Esta é uma tática clássica usada por atores maliciosos para evitar a atenção das autoridades policiais locais.
-3. **Traga o Seu Próprio Ambiente:** O malware detecta silenciosamente o seu sistema operativo (Windows, macOS ou Linux) e descarrega uma versão portátil do **Node.js** diretamente do site oficial. Depois usa este Node.js descarregado para executar um ficheiro JavaScript secundário e invisível (provavelmente um stealer como Lumma ou RedLine) para siphon palavras-passe, cookies e carteiras de criptografia.
+1. **Comando e Controlo (C2) na Blockchain:** Em vez de se ligar a um endereço IP tradicional, fácil de bloquear, o malware consulta a **blockchain da Solana**. Ele procura o histórico de transações de uma carteira específica e extrai comandos encriptados escondidos dentro dos "Memos" das transações. Isto torna a desativação da infraestrutura do atacante quase impossível.
+2. **Geofencing (A Exceção Russa):** O script inclui uma função chamada `_isRussianSystem()`. Ela verifica o idioma, o fuso horário e a localização do sistema. Se a máquina infetada estiver na Rússia ou em países da CEI, o malware fecha-se silenciosamente. Esta é uma tática clássica usada por hackers para evitar chamar a atenção das autoridades locais.
+3. **Traz o Teu Próprio Ambiente (BYOE):** O malware deteta silenciosamente o teu sistema operativo (Windows, macOS ou Linux) e descarrega uma versão portátil do **Node.js** diretamente do site oficial. Depois, usa esse Node.js para executar um segundo ficheiro JavaScript invisível (provavelmente um *stealer* como o Lumma ou RedLine) para roubar passwords, cookies e carteiras de criptomoedas.
 
 ## A Escala da Infeção
 
-Pensando que isto poderia ser um incidente isolado, peguei num fragmento do código ofuscado e procurei-o em todo o GitHub.
+A pensar que isto poderia ser um caso isolado, peguei num bocado do código ofuscado e pesquisei-o pelo GitHub inteiro. 
 
-Os resultados foram arrepiantes. **Mais de 300 repositórios foram infetados com este código exato.** Após alguns investigação, parece que este código malicioso está a ser injetado diretamente em ficheiros durante o processo de `git commit`. Embora o vetor inicial exato (seja uma extensão VS Code comprometida, um pacote npm/PyPI malicioso, ou uma ferramenta de terminal sequestrada) ainda seja um mistério que estou a investigar, o resultado é claro: os programadores estão involuntariamente a colocar malware nos seus próprios repositórios.
+Os resultados deram-me arrepios. **Mais de 300 repositórios estavam infetados com exatamente este mesmo código.** Após alguma investigação, parece que este código malicioso está a ser injetado diretamente nos ficheiros durante o processo de `git commit`. Embora o vetor inicial exato (seja uma extensão do VS Code comprometida, um pacote npm/PyPI malicioso ou uma ferramenta de terminal pirateada) ainda seja um mistério que estou a investigar, o resultado é claro: os *developers* estão a fazer *push* de malware para os seus próprios repositórios sem saberem.
 
 ## O Verdadeiro Perigo: Modelos de IA Envenenados
 
-Mas aqui está o que me mantém acordado à noite: **dados de treino de IA.**
+Mas aqui está o que me tira o sono: **dados de treino de IA.**
 
-Milhares de engenheiros de aprendizagem automática e investigadores de IA estão ativamente a fazer scraping de repositórios GitHub para treinar os seus grandes modelos de linguagem (LLMs), modelos de geração de código, e ferramentas de análise de segurança. Estão a tratar código de fonte aberta como "dados de treino gratuitos." O que não percebem é que potencialmente estão a aspirar estes fragmentos ofuscados e maliciosos e a alimentá-los diretamente para as suas redes neurais.
+Milhares de engenheiros de *machine learning* e investigadores de IA andam ativamente a fazer *scraping* de repositórios do GitHub para treinar os seus grandes modelos de linguagem (LLMs), modelos de geração de código e ferramentas de análise de segurança. Estão a tratar o código open-source como "dados de treino gratuitos". O que não percebem é que podem estar a aspirar estes pedaços de código malicioso e ofuscado, alimentando-os diretamente às suas redes neuronais.
 
-Imagine um cenário onde um modelo de IA é treinado em 300+ repositórios infetados. O código malicioso, incorporado profundamente dentro de milhares de amostras de código legítimo, torna-se parte dos padrões aprendidos do modelo. Avançando para a produção: os programadores usam este modelo "treinado" para:
+Imagina um cenário em que um modelo de IA é treinado em mais de 300 repositórios infetados. O código do malware, embutido bem fundo em milhares de exemplos de código legítimos, torna-se parte dos padrões aprendidos pelo modelo. Avançamos para a produção: os *developers* usam este modelo "treinado" para:
 - Gerar sugestões de código (e o modelo sugere malware ofuscado)
-- Analisar vulnerabilidades de segurança (mas o próprio modelo contém backdoors ocultos)
-- Validar dependências de terceiros (enquanto involuntariamente recomenda pacotes comprometidos)
+- Analisar vulnerabilidades de segurança (mas o próprio modelo contém *backdoors* escondidos)
+- Validar dependências de terceiros (recomendando pacotes comprometidos sem saber)
 
-O cenário de pesadelo não é apenas um modelo envenenado—é um indetectável. O malware vive dentro dos pesos e vieses matemáticos da rede neural, invisível para qualquer análise estática de código. Não acionará caixas de areia ou scanners de antivírus porque não é código "em execução"; está incorporado como comportamento aprendido. Nunca o encontraria até o modelo começar a gerar sugestões maliciosas em produção, potencialmente comprometendo milhares de projetos posteriores simultaneamente.
+O cenário de pesadelo não é apenas um modelo envenenado — é um modelo indetetável. O malware vive dentro dos pesos e vieses matemáticos da rede neuronal, invisível para qualquer análise estática de código. Não vai acionar *sandboxes* ou antivírus porque não é código "em execução"; está embutido como um comportamento aprendido. Só davas por ela quando o modelo começasse a gerar sugestões maliciosas em produção, podendo comprometer milhares de projetos a jusante ao mesmo tempo.
 
-Este é um ataque da cadeia de fornecimento que transcende repositórios e infeta as próprias ferramentas que usamos para escrever código seguro.
+Este é um ataque à cadeia de fornecimento que ultrapassa os repositórios e infeta as próprias ferramentas que usamos para escrever código seguro.
 
-## A Mitigação: Uma Solução Rápida
+## A Mitigação: Um Penso Rápido
 
-Até identificarmos exatamente qual ferramenta ou pacote está a sequestrar o processo de commit, precisamos de uma forma de parar o sangramento.
+Até descobrirmos exatamente que ferramenta ou pacote está a sequestrar o processo de commit, precisamos de uma forma de estancar a hemorragia. 
 
-Como este malware depende de injetar uma cadeia Base64 massiva e contínua no seu código, a forma mais fácil de evitar que o seu repositório seja infetado (e o propague a outros) é configurar um **Hook Pré-commit** rigoroso.
+Como este malware depende da injeção de uma string Base64 gigante e contínua no teu código, a maneira mais fácil de evitar que o teu repo seja infetado (e espalhe para outros) é configurar um **Pre-commit Hook** rigoroso.
 
-Pode bloquear qualquer commit que contenha uma cadeia anormalmente longa (por exemplo, mais de 100 caracteres sem espaços). Aqui está um conceito simples para um hook pré-commit do Git que pode adicionar ao ficheiro `.git/hooks/pre-commit`:
+Podes bloquear qualquer commit que contenha uma string invulgarmente longa (por exemplo, mais de 100 caracteres sem espaços). Aqui está um conceito simples para um *pre-commit hook* do Git que podes adicionar ao teu ficheiro `.git/hooks/pre-commit`:
 
 ```bash
 #!/bin/bash
-# Um simples hook pré-commit para apanhar injeções massivas de base64
+# A simple pre-commit hook to catch massive base64 injections
 
 if git diff --cached | grep -E '[a-zA-Z0-9+/]{100,}'; then
-    echo "🚨 ALERTA DE SEGURANÇA: Uma cadeia suspeita longa (possível carregamento Base64) foi detetada."
-    echo "Commit rejeitado. Por favor, reveja o seu código para malware injetado."
+    echo "🚨 SECURITY ALERT: A suspiciously long string (potential Base64 payload) was detected."
+    echo "Commit rejected. Please review your code for injected malware."
     exit 1
 fi
 ```
 
 ## Conclusão
 
-Os ataques da cadeia de fornecimento estão a ficar mais inteligentes. Já não estão apenas a visar servidores de produção; estão a viver dentro dos nossos ambientes de desenvolvimento, sequestram os nossos commits, e usam blockchains descentralizadas para esconder os seus rastos.
+Os ataques à cadeia de fornecimento estão cada vez mais espertos. Já não atacam apenas servidores de produção; vivem dentro dos nossos ambientes de desenvolvimento, sequestram os nossos commits e usam blockchains descentralizadas para esconder o rasto. 
 
-Verifique os seus repositórios, reveja as suas dependências, e se vir um bloco gigantesco de letras aleatórias nos seus ficheiros Python, não o execute. Mantenha-se seguro!
+Verifica os teus repositórios, revê as tuas dependências e se vires um bloco gigante de letras aleatórias nos teus ficheiros Python, não o executes. Mantenham-se seguros por aí!
