@@ -13,6 +13,10 @@ Originally conceived in 1971 at Stanford and formalized under RFC 742 (and later
 
 Legendary developers like John Carmack used their `.plan` files throughout the 1990s as raw, transparent devlogs. If you appreciate the IndieWeb, decentralized protocols, or sheer Unix minimalism, running your own Finger presence is a fun project that takes only a few minutes.
 
+<p align="center">
+  <img src="/images/finger-status.jpg" alt="Example Finger status page with a minimal terminal-style profile" width="900" />
+</p>
+
 ## Method 1: The Zero-Setup Hosted Route (Happy Net Box)
 
 If you don't want to manage a server or open firewall ports, community directories like `happynetbox.com` provide a web UI that bridges into the Finger network.
@@ -24,7 +28,7 @@ If you don't want to manage a server or open firewall ports, community directori
 Anyone around the world can immediately check your status from their local terminal:
 
 ```bash
-finger yourusername@happynetbox.com
+finger mazafard@happynetbox.com
 ```
 
 ## Method 2: Self-Hosting on an Ubuntu Server

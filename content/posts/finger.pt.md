@@ -13,6 +13,10 @@ Criado originalmente em 1971 em Stanford e formalizado pelo RFC 742 (e mais tard
 
 Programadores lendários como John Carmack usaram os seus ficheiros `.plan` ao longo dos anos 90 como diários de desenvolvimento transparentes e crus. Se aprecia a IndieWeb, protocolos descentralizados ou a minimalismo puro do Unix, ter a sua própria presença no Finger é um projeto divertido que demora apenas alguns minutos.
 
+<p align="center">
+  <img src="/images/finger-status.jpg" alt="Exemplo de página de estado do Finger com um visual mínimo em terminal" width="900" />
+</p>
+
 ## Método 1: A Opção Sem Servidor (Happy Net Box)
 
 Se não quiser gerir um servidor nem abrir portas na firewall, diretórios comunitários como `happynetbox.com` oferecem uma interface web que comunica com a rede Finger.
@@ -24,7 +28,7 @@ Se não quiser gerir um servidor nem abrir portas na firewall, diretórios comun
 Qualquer pessoa no mundo pode consultar o seu estado a partir do terminal local:
 
 ```bash
-finger yourusername@happynetbox.com
+finger mazafard@happynetbox.com
 ```
 
 ## Método 2: Alojamento Próprio num Servidor Ubuntu
