@@ -184,7 +184,7 @@ params:
   ShowPageNums: true
   ShowToc: true
   comments: true
-  images: ["images/papermod-cover.png"]
+  images: ["/me.jpg"]
 
   profileMode:
     enabled: false
@@ -248,11 +248,11 @@ params:
 
   assets:
     disableHLJS: true
-    favicon: "https://www.fard.pt/favicon.ico"
-    favicon16x16: "https://www.fard.pt/favicon-16x16.png"
-    favicon32x32: "https://www.fard.pt/favicon-32x32.png"
-    apple_touch_icon: "https://www.fard.pt/apple-touch-icon.png"
-    safari_pinned_tab: "https://www.fard.pt/safari-pinned-tab.svg"
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    safari_pinned_tab: "/safari-pinned-tab.svg"
 
   # cover:
   #     hidden: true # hide everywhere but not in structured data
