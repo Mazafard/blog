@@ -5,6 +5,10 @@ draft: false
 tags: ["Networking", "Unix", "Self-Hosting", "History", "Linux"]
 weight: -11
 categories: ["Technology", "Programming"]
+cover:
+  image: "/images/finger-status.jpg"
+  alt: "Finger terminal status example"
+  caption: "A minimal Finger status page in plain text"
 ---
 
 Long before algorithmic feeds, engagement metrics, and push notifications, the internet had a radically simple way to see what people were up to: Finger.

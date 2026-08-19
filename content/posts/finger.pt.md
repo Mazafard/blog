@@ -5,6 +5,10 @@ draft: false
 tags: ["Networking", "Unix", "Self-Hosting", "History", "Linux"]
 weight: -11
 categories: ["Technology", "Programming"]
+cover:
+  image: "/images/finger-status.jpg"
+  alt: "Exemplo de página de estado do Finger"
+  caption: "Uma página de estado minimalista do Finger em texto simples"
 ---
 
 Muito antes dos feeds com algoritmos, métricas de engagement e notificações constantes, a Internet tinha uma forma incrivelmente simples de ver o que as pessoas estavam a fazer: o Finger.

@@ -5,6 +5,10 @@ draft: false
 tags: ["Networking", "Unix", "Self-Hosting", "History", "Linux"]
 weight: -11
 categories: ["Technology", "Programming"]
+cover:
+  image: "/images/finger-status.jpg"
+  alt: "نمونه صفحه وضعیت Finger"
+  caption: "یک صفحه وضعیت مینیمال Finger به صورت متن ساده"
 ---
 
 خیلی پیش از الگوریتم‌ها، معیارهای تعامل و اعلان‌های بی‌پایان، اینترنت راهی فوق‌العاده ساده برای دیدن وضعیت دیگران داشت: Finger.
