@@ -17,6 +17,25 @@ Criado originalmente em 1971 em Stanford e formalizado pelo RFC 742 (e mais tard
 
 Programadores lendários como John Carmack usaram os seus ficheiros `.plan` ao longo dos anos 90 como diários de desenvolvimento transparentes e crus. Se aprecia a IndieWeb, protocolos descentralizados ou a minimalismo puro do Unix, ter a sua própria presença no Finger é um projeto divertido que demora apenas alguns minutos.
 
+## O verdadeiro propósito do Finger (além do microblog)
+
+Embora a comunidade tecnológica recorde hoje o Finger como um proto-microblog, a sua especificação formal no **RFC 742** e **RFC 1288** define-o como o **Name/Finger User Information Protocol**.
+
+O objetivo original não era criar uma rede social, mas sim fornecer um sistema de consulta de presença remota. Antes do Finger, sistemas como o WAITS apenas disponibilizavam o comando `WHO`, que devolvia números de linha de terminal enigmáticos. O Finger humanizou essas consultas, fornecendo:
+
+- Nomes completos e endereços de email.
+- Tempos de inatividade (idle) do terminal e localização física do posto de trabalho.
+- Estado de presença para verificar se a pessoa estava disponível no edifício.
+
+## O declínio: Privacidade e Engenharia Social
+
+Na Internet das décadas de 70 e 80, baseada na confiança mútua, partilhar metadados era visto como uma conveniência prática. Com o tempo, tornou-se um vetor crítico de segurança:
+
+1. **Reconhecimento e Engenharia Social:** Os atacantes utilizavam o Finger para extrair listas completas de colaboradores, emails e padrões de identidade, facilitando ataques de personificação e phishing corporativo.
+2. **Buffer Overflows:** Em 1988, o Morris Worm explorou vulnerabilidades de memória no daemon `fingerd` original para executar código arbitrário remotamente.
+
+Por estas razões, no final dos anos 90, os administradores de sistemas desativaram a porta 79 em quase toda a infraestrutura da Internet, transformando o Finger numa relíquia histórica fascinante.
+
 <p align="center">
   <img src="/images/finger-status.jpg" alt="Exemplo de página de estado do Finger com um visual mínimo em terminal" width="900" />
 </p>
