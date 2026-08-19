@@ -45,6 +45,7 @@ languages:
           url: tags/
           weight: 20
     params:
+      images: ["/images/screen/en.webp"]
       profileMode:
         enabled: true
         title: Mazafard
@@ -95,6 +96,7 @@ languages:
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
       languageAltTitle: Português
+      images: ["/images/screen/pt.webp"]
       profileMode:
         enabled: true
         title: Mazafard
@@ -143,6 +145,7 @@ languages:
     params:
       languageAltTitle: فارسی
       author: "مضا فرد"
+      images: ["/images/screen/fa.webp"]
       profileMode:
         enabled: true
         title: مضافرد
@@ -184,7 +187,7 @@ params:
   ShowPageNums: true
   ShowToc: true
   comments: true
-  images: ["/me.jpg"]
+  images: ["/images/screen/en.webp"]
 
   profileMode:
     enabled: false
