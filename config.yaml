@@ -1,6 +1,6 @@
 baseURL: https://blog.fard.pt/
 languageCode: en-us
-title: MazaFard
+title: "MazaFard | Notes, systems, and life in Portugal"
 googleAnalytics: "G-5JVY1RQY4E"
 pagination:
   pagerSize: 5
@@ -45,7 +45,7 @@ languages:
           url: tags/
           weight: 20
     params:
-      images: ["/images/screen/en.webp"]
+      images: ["/images/og/en.webp"]
       profileMode:
         enabled: true
         title: Mazafard
@@ -67,7 +67,7 @@ languages:
   pt:
     languageName: ":portugal:"
     weight: 2
-    title: Mazafard
+    title: "Mazafard | Notas, sistemas e vida em Portugal"
     taxonomies:
       category: PTcategories
       tag: PTtags
@@ -96,7 +96,7 @@ languages:
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
       languageAltTitle: Português
-      images: ["/images/screen/pt.webp"]
+      images: ["/images/og/pt.webp"]
       profileMode:
         enabled: true
         title: Mazafard
@@ -119,7 +119,7 @@ languages:
     languagedirection: rtl
     languageName: ":iran:"
     weight: 3
-    title: مضافرد
+    title: "مضافرد | یادداشت‌ها، سیستم‌ها و زندگی در پرتغال"
     taxonomies:
       category: FAcategories
       tag: FAtags
@@ -145,7 +145,7 @@ languages:
     params:
       languageAltTitle: فارسی
       author: "مضا فرد"
-      images: ["/images/screen/fa.webp"]
+      images: ["/images/og/fa.webp"]
       profileMode:
         enabled: true
         title: مضافرد
@@ -169,7 +169,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Personal blog by Maza Fard on engineering, entrepreneurship, and life in Portugal"
+  description: "Notes, systems, and practical lessons from software engineering, life abroad, and building useful things in Portugal."
   author: "Maza Fard"
   # author: ["Me", "You"] # multiple authors
 
@@ -187,7 +187,7 @@ params:
   ShowPageNums: true
   ShowToc: true
   comments: true
-  images: ["/images/screen/en.webp"]
+  images: ["/images/og/en.webp"]
 
   profileMode:
     enabled: false
