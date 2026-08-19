@@ -29,15 +29,39 @@ languages:
       series: series
     menu:
       main:
-        - name: Archive
-          url: archives
+        - name: Home
+          url: /
+          weight: 1
+        - name: Posts
+          url: posts/
           weight: 5
+        - name: Archive
+          url: archives/
+          weight: 10
         - name: Search
           url: search/
-          weight: 10
+          weight: 15
         - name: Tags
           url: tags/
-          weight: 10
+          weight: 20
+    params:
+      profileMode:
+        enabled: true
+        title: Mazafard
+        imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+        imageTitle: Mazafard
+        subtitle: "Software. Systems. A life in motion."
+        buttons:
+          - name: Blog
+            url: posts/
+          - name: Archive
+            url: archives/
+      homeInfoParams:
+        Title: "Things I might forget \U0001F44B"
+        Content: >
+          I write about the things I learn here so I can come back to them later.
+
+          If they help you too, even better. That's the whole point.
 
   pt:
     languageName: ":portugal:"
@@ -49,20 +73,24 @@ languages:
       series: PTseries
     menu:
       main:
-        - name: Archive
-          url: archives/
+        - name: Início
+          url: /
+          weight: 1
+        - name: Posts
+          url: posts/
           weight: 5
+        - name: Arquivo
+          url: archives/
+          weight: 10
         - name: Tags
           url: PTtags
-          weight: 10
-        - name: Categories
+          weight: 15
+        - name: Categorias
           url: PTcategories
-          weight: 10
-        - name: Series
+          weight: 20
+        - name: Séries
           url: PTseries
-          weight: 10
-        - name: NullLink
-          url: "#"
+          weight: 25
 
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
@@ -72,13 +100,18 @@ languages:
         title: Mazafard
         imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
         imageTitle: Mazafard
-        # imageWidth: 120
-        # imageHeight: 120
-        subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+        subtitle: "Software, sistemas e uma vida em movimento."
         buttons:
           - name: Blog
-            url: posts
-        
+            url: posts/
+          - name: Arquivo
+            url: archives/
+      homeInfoParams:
+        Title: "Coisas que posso esquecer \U0001F44B"
+        Content: >
+          Escrevo sobre as coisas que aprendo aqui para as poder voltar a consultar mais tarde.
+
+          Se também te ajudarem, tanto melhor. É isso que faz sentido.
 
   fa:
     languagedirection: rtl
@@ -91,19 +124,36 @@ languages:
       series: FAseries
     menu:
       main:
-        - name: تگ‌ها
-          url: fatags
-          weight: 20
-        - name: جستجو
-          url: search/
+        - name: خانه
+          url: /
+          weight: 1
+        - name: پست‌ها
+          url: posts/
           weight: 5
         - name: آرشیو
           url: archives/
           weight: 10
+        - name: جستجو
+          url: search/
+          weight: 15
+        - name: تگ‌ها
+          url: fatags
+          weight: 20
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
       languageAltTitle: فارسی
       author: "مضا فرد"
+      profileMode:
+        enabled: true
+        title: مضافرد
+        imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+        imageTitle: مضافرد
+        subtitle: "نرم‌افزار، سیستم‌ها و زندگی در حرکت."
+        buttons:
+          - name: پست‌ها
+            url: posts/
+          - name: آرشیو
+            url: archives/
       homeInfoParams:
         Title: "چیزهایی که ممکنه یادمون بره \U0001F44B"
         Content: بیشتر چیزهایی که اینجا می‌نویسم برای اینه که بعدن خودم به سراغ‌شون برم، اما اگه به کار شما هم هم اومد که چه خوب و خفن! دم همه‌مون گرم
@@ -150,16 +200,16 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "Welcome to My Blog"
+    Title: "Notes, systems, and the occasional life experiment"
     Content: >
 
-      👋 Welcome to my personal blog!
-      
-      - I'm **Mazafard**, an adventurer who took a leap of faith by migrating to a new country and embarking on the journey of entrepreneurship.
+      👋 This is my personal space for code, tooling, and the messy reality of building while living abroad.
 
-      - I'm passionate about exploring new fields and sharing the insights I gather along the way.
+      - I write about software engineering, product thinking, and the systems that make work easier.
 
-      - Join me as I delve into exciting topics and navigate this ever-evolving path with enthusiasm and determination!
+      - I also keep notes on migration, entrepreneurship, and the lessons that come from starting over.
+
+      - If you like practical writing and honest observations, you’re in the right place.
 
   socialIcons:
     - name: github
